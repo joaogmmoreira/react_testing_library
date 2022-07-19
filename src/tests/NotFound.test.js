@@ -11,15 +11,15 @@ const renderWithRouter = (component) => {
   });
 };
 
-describe('01. Testa o componente App.js', () => {
-  test('se no topo da aplicação contém um conjunto fixo de links de navegação', () => {
+describe('04. Testa o componente NotFound.js', () => {
+  test('se a página contém um heading h2 com o texto Page requested not found', () => {
     renderWithRouter(<NotFound />);
 
     const notFound = screen.getByRole('heading', { name: /Page requested not found/i });
 
     expect(notFound).toBeInTheDocument();
   });
-  test('se no topo da aplicação contém um conjunto fixo de links de navegação', () => {
+  test('se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif', () => {
     renderWithRouter(<NotFound />);
 
     const cryingImg = screen.getByAltText(/Pikachu crying because the page/i);
